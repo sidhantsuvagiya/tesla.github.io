@@ -1,0 +1,306 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+/* header part */
+header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 4rem;
+  color: #4a5d8b;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+header ul {
+  width: 60%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  line-height: 0.2rem;
+}
+header ul li {
+  text-decoration: none;
+  font-size: 2.8rem;
+  font-weight: 600;
+  font-family: "Poppins";
+  transition: all 0.8s;
+  border-bottom: 3px solid transparent;
+}
+header ul li a {
+  color: #4a5d8b;
+  opacity: 0.9;
+  position: relative;
+  transition: all 0.3s;
+}
+header ul li a:hover {
+  color: #b3eaff;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+/* humburger navbar for mobile device */
+.checkbtn {
+  display: none;
+}
+#check {
+  display: none;
+}
+.checkbtn img {
+  width: 3rem;
+}
+
+/* middle part */
+
+main {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.left h1 {
+  font-size: 3.3rem;
+  white-space: nowrap;
+  color: #4a5d8b;
+}
+
+.left p {
+  font-size: 2.2rem;
+
+  color: #4a5d8b;
+}
+
+.left button {
+  padding: 1.2rem 1.8rem;
+  margin-right: 13px;
+  border-radius: 5rem;
+  font-weight: 550;
+  font-size: 1.5rem;
+  color: #4a5d8b;
+  background-color: #b3eaff;
+  border: 2px solid white;
+  transition: 0.3s;
+}
+.left button:hover {
+  border: 2px solid #b3eaff;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+main .right img {
+  width: 40rem;
+  height: auto;
+}
+
+/* footer */
+
+footer {
+  min-width: 80%;
+  display: flex;
+  justify-content: start;
+}
+footer img {
+  height: 3.5rem;
+  width: 3.5rem;
+  margin-right: 1.5rem;
+  transition: 0.3s;
+}
+footer img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* rensponsive */
+
+@media screen and (max-width: 1100px) and (min-width: 929px) {
+  html {
+    font-size: 59%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  header {
+    width: 90%;
+  }
+  header ul {
+    width: 65%;
+  }
+  main {
+    width: 90%;
+  }
+  footer {
+    width: 90%;
+  }
+}
+
+@media (max-width: 930px) {
+  html {
+    font-size: 51%;
+  }
+
+  .container {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  header {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  header ul {
+    width: 100%;
+    justify-content: space-around;
+    margin: 2rem 0;
+    padding: 2.5rem 2rem 2rem 2rem;
+    background-color: #b3eaff;
+    line-height: 0;
+  }
+
+  header ul li a:hover {
+    color: #fff;
+  }
+
+  main {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .left {
+    width: 50%;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .left p {
+    text-align: center;
+    margin: 3rem 0;
+  }
+  main .right {
+    width: 100%;
+    height: 46vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* mobile devices */
+
+@media screen and (max-width: 560px) {
+  html {
+    font-size: 54%;
+  }
+  .container {
+    justify-content: space-around;
+  }
+  header {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+  header ul {
+    width: 100%;
+    height: 44vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    left: -120%;
+    top: 3rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s;
+    background-color: #4a5d8b;
+  }
+  header ul li {
+    display: block;
+  }
+  header ul li a {
+    color: #fff;
+  }
+  header ul li a:hover {
+    color: #b3eaff;
+  }
+  .checkbtn {
+    display: block;
+  }
+  #check:checked ~ ul {
+    left: 0;
+    cursor: pointer;
+  }
+
+  main .left {
+    width: 90%;
+  }
+  main .right {
+    width: 100%;
+    height: auto;
+  }
+  main .left p {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  main .left button {
+    margin: 0;
+  }
+
+  main .right img {
+    width: 35rem;
+    height: auto;
+    margin-top: 3rem;
+  }
+
+  footer img:nth-child(4) {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 372px) {
+  main .right img {
+    width: 28rem;
+    margin-top: 3.5rem;
+    height: auto;
+  }
+}
